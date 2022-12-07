@@ -2,8 +2,8 @@
     width: 250px;
     height: 50px;
     margin-top: 25px;
-    align-items: stretch;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     -unity-font: url('project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#Arial');
     -unity-font-style: bold;
     font-size: 28px;
@@ -18,7 +18,7 @@
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: rgba(70, 112, 154, 255);
+    background-color: rgb(70, 112, 154);
 }
 
 .slider {
@@ -26,5 +26,5 @@
     width: 250px;
     font-size: 28px;
     -unity-text-align: middle-left;
-    background-color: rgba(70, 112, 154, 255);
+    background-color: rgb(70, 112, 154);
 }
