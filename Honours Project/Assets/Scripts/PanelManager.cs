@@ -30,6 +30,9 @@ public class PanelManager : MonoBehaviour
     }
     private void OptionsButtonClicked()
     {
+        // switch between visual trees
+        Document.rootVisualElement.Q<VisualElement>("OptionsMenuContainer").style.display = DisplayStyle.Flex;
+        Document.rootVisualElement.Q<VisualElement>("MainMenuContainer").style.display = DisplayStyle.None;
     }
     private void QuitButtonClicked()
     {
