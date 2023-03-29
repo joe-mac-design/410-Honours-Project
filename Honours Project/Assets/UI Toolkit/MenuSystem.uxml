@@ -7,22 +7,73 @@
         <ui:VisualElement name="ProfileMenuContainer" class="SubMenuContainer" style="display: none;">
             <ui:Label text="PROFILE MENU" display-tooltip-when-elided="true" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; font-size: 148px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
         </ui:VisualElement>
-        <ui:VisualElement name="QuitMenuContainer" class="SubMenuContainer" style="display: none;">
-            <ui:Label text="QUIT MENU" display-tooltip-when-elided="true" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; font-size: 148px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
-        </ui:VisualElement>
         <ui:VisualElement name="OptionsMenuContainer" class="SubMenuContainer" style="display: none;">
-            <ui:Label text="OPTIONS MENU" display-tooltip-when-elided="true" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; font-size: 148px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
-            <ui:VisualElement name="OptionsContainer" style="position: absolute; width: 1200px; height: 600px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; background-color: rgb(21, 36, 75); visibility: hidden;">
-                <ui:ScrollView style="width: 100%; height: 100%;" />
+            <ui:VisualElement name="OptionsContainer" style="position: absolute; width: 1200px; height: 600px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; background-color: rgb(21, 36, 75); visibility: visible; border-left-color: rgb(42, 232, 255); border-right-color: rgb(42, 232, 255); border-top-color: rgb(42, 232, 255); border-bottom-color: rgb(42, 232, 255);">
+                <ui:ScrollView style="width: 100%; height: 100%;">
+                    <ui:VisualElement name="ScrollViewContainer" style="height: 900px; flex-direction: row; justify-content: space-between;">
+                        <ui:GroupBox name="ScrollViewContents" style="width: 48%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; justify-content: flex-start;">
+                            <ui:VisualElement name="VideoContents" style="height: 250px;">
+                                <ui:Label text="Video" display-tooltip-when-elided="true" name="Heading" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 48px;" />
+                                <ui:VisualElement name="Divider" style="width: 100%; height: 5px; background-color: rgb(42, 232, 255); margin-bottom: 30px;" />
+                                <ui:Toggle label="Fullscreen" value="false" name="FullscreenToggle" class="OptionsContentContainer" />
+                                <ui:SliderInt label="Brightness" value="2" high-value="5" low-value="1" show-input-field="false" direction="Horizontal" inverted="false" name="BrightnessSlider" focusable="true" class="OptionsContentContainer" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="AudioContents" style="height: 250px;">
+                                <ui:Label text="Audio" display-tooltip-when-elided="true" name="Heading" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 48px;" />
+                                <ui:VisualElement name="Divider" style="width: 100%; height: 5px; background-color: rgb(42, 232, 255); margin-bottom: 30px;" />
+                                <ui:SliderInt picking-mode="Ignore" label="Music" value="65" high-value="100" show-input-field="false" low-value="1" name="MusicSlider" class="OptionsContentContainer" />
+                                <ui:SliderInt picking-mode="Ignore" label="SFX" value="50" high-value="100" show-input-field="false" low-value="1" name="SFXSlider" class="OptionsContentContainer" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="AccessContents" style="height: 350px;">
+                                <ui:Label text="Acessibility" display-tooltip-when-elided="true" name="Heading" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 48px;" />
+                                <ui:VisualElement name="Divider" style="width: 100%; height: 5px; background-color: rgb(42, 232, 255); margin-bottom: 30px;" />
+                                <ui:SliderInt picking-mode="Ignore" label="Text Size" value="50" high-value="100" show-input-field="false" low-value="1" name="TextSlider" class="OptionsContentContainer" />
+                                <ui:DropdownField label="Dropdown" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="FontTypeDDF" class="OptionsContentContainer" />
+                                <ui:DropdownField label="Dropdown" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="FontColourDDF" class="OptionsContentContainer" />
+                            </ui:VisualElement>
+                        </ui:GroupBox>
+                        <ui:VisualElement name="ScrollViewSeperator" style="width: 5px; background-color: rgb(42, 232, 255); height: 98%; top: 1%;" />
+                        <ui:GroupBox name="ScrollViewDescriptors" style="width: 48%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; justify-content: flex-start;">
+                            <ui:VisualElement name="VideoContents" style="height: 250px;">
+                                <ui:Label text="Video" display-tooltip-when-elided="true" name="Heading" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 48px; display: flex; visibility: hidden;" />
+                                <ui:VisualElement name="Divider" style="width: 100%; height: 5px; background-color: rgb(42, 232, 255); margin-bottom: 30px;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="AudioContents" style="height: 250px;">
+                                <ui:Label text="Audio" display-tooltip-when-elided="true" name="Heading" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 48px; visibility: hidden;" />
+                                <ui:VisualElement name="Divider" style="width: 100%; height: 5px; background-color: rgb(42, 232, 255); margin-bottom: 30px; visibility: visible;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="AccessContents" style="height: 350px;">
+                                <ui:Label text="Acessibility" display-tooltip-when-elided="true" name="Heading" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 48px; visibility: hidden;" />
+                                <ui:VisualElement name="Divider" style="width: 100%; height: 5px; background-color: rgb(42, 232, 255); margin-bottom: 30px;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
+                            </ui:VisualElement>
+                        </ui:GroupBox>
+                    </ui:VisualElement>
+                </ui:ScrollView>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="NavBarContainer" style="width: 1920px; height: 150px; flex-direction: row-reverse; align-items: center; flex-shrink: 1; flex-basis: auto; flex-wrap: nowrap; justify-content: flex-end; position: absolute; left: auto; margin-top: 10px; margin-left: 0; margin-right: 0; margin-bottom: 0;">
+        <ui:VisualElement name="NavBarContainer" style="width: 1920px; height: 150px; flex-direction: row-reverse; align-items: center; flex-shrink: 1; flex-basis: auto; flex-wrap: nowrap; justify-content: flex-end; position: absolute; left: auto; margin-top: 10px; margin-left: 0; margin-right: 0; margin-bottom: 0; display: flex;">
             <ui:Button text="QUIT" display-tooltip-when-elided="true" name="QuitButton" class="NavBarBtn" style="border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
             <ui:Button text="OPTIONS" display-tooltip-when-elided="true" name="OptionsButton" class="NavBarBtn" style="border-bottom-left-radius: 0; border-top-left-radius: 0;" />
             <ui:Button text="PLAY" display-tooltip-when-elided="true" name="PlayButton" class="NavBarBtn" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px;" />
             <ui:VisualElement name="ProfileContainer" style="width: 450px; height: 100%; align-items: flex-start; justify-content: center;">
                 <ui:Button display-tooltip-when-elided="true" name="ProfileButton" class="ProfileImageBtn" style="margin-right: 0; margin-left: 20px; height: 130px; width: 130px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
             </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="QuitMenuContainer" class="SubMenuContainer" style="display: none; align-items: center; justify-content: space-between;">
+            <ui:IMGUIContainer name="Water-top" style="width: 100%; height: 250px; background-color: rgb(59, 217, 255); translate: 0 -250px;" />
+            <ui:Label text="Are you sure you want to quit?&#10;Your progress will be saved." display-tooltip-when-elided="true" name="BodyLabel" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; font-size: 72px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+            <ui:VisualElement name="ButtonContainer" style="flex-direction: row; margin-top: 0; width: 1200px; height: 150px; justify-content: space-around; align-items: center;">
+                <ui:Button text="YES" display-tooltip-when-elided="true" name="ConfirmBtn" class="StandardBtn" />
+                <ui:Button text="NO" display-tooltip-when-elided="true" name="NegativeBtn" class="StandardBtn" />
+            </ui:VisualElement>
+            <ui:IMGUIContainer name="Water-Bottom" style="width: 100%; height: 250px; background-color: rgb(59, 217, 255); bottom: 0; translate: 0 250px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

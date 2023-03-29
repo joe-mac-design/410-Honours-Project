@@ -134,3 +134,89 @@
     justify-content: center;
     display: flex;
 }
+
+.StandardBtn {
+    background-color: rgb(252, 255, 59);
+    width: 500px;
+    height: 125px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 72px;
+    -unity-font: url('project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&type=3#Sono-Bold');
+    -unity-font-definition: initial;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.StandardBtn:hover {
+    background-color: rgb(200, 202, 39);
+    width: 500px;
+    height: 125px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 72px;
+    -unity-font: url('project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&type=3#Sono-Bold');
+    -unity-font-definition: initial;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.StandardBtn:active {
+    background-color: rgb(164, 166, 29);
+    width: 500px;
+    height: 125px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 72px;
+    -unity-font: url('project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&type=3#Sono-Bold');
+    -unity-font-definition: initial;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.OptionsContentContainer {
+    -unity-font: url('project://database/Assets/UI/Fonts/Atkinson-Hyperlegible-Regular-102.ttf?fileID=12800000&guid=ab14c2143aad4e945ab2ba1a1a402bb8&type=3#Atkinson-Hyperlegible-Regular-102');
+    -unity-font-definition: initial;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
