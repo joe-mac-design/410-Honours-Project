@@ -6,11 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
+    // Play Menu
     public Button playButton;
+
+    // Options Menu
     public Button optionsButton;
+
+    // Quit Menu
     public Button quitButton;
+    public Button quitConfirmButton;
+    public Button quitNegativeButton;
+
+    // Profile Menu
     public Button profileButton;
 
+    // Visual Elements
     public VisualElement playMenu;
     public VisualElement optionsMenu;
     public VisualElement quitMenu;
@@ -23,7 +33,12 @@ public class UIController : MonoBehaviour
 
         playButton = root.Q<Button>("PlayButton");
         optionsButton = root.Q<Button>("OptionsButton");
+        
+        // Quit Buttons
         quitButton = root.Q<Button>("QuitButton");
+        quitConfirmButton = root.Q<Button>("ConfirmBtn");
+        quitNegativeButton = root.Q<Button>("NegativeBtn");
+        
         profileButton = root.Q<Button>("ProfileButton");
 
         optionsMenu = root.Q<VisualElement>("OptionsMenuContainer");
@@ -35,6 +50,9 @@ public class UIController : MonoBehaviour
         quitButton.clicked += QuitButtonActive;
         playButton.clicked += PlayButtonActive;
         profileButton.clicked += ProfileButtonActive;
+
+        quitConfirmButton.clicked += QuitConfirmActive;
+        quitNegativeButton.clicked += QuitNegativeActive;
     }
 
     void PlayButtonActive()
@@ -55,6 +73,18 @@ public class UIController : MonoBehaviour
     {
         quitMenu.style.display = DisplayStyle.Flex;
         optionsMenu.style.display = DisplayStyle.None;
+    }
+
+    void QuitConfirmActive()
+    {
+        quitMenu.style.display = DisplayStyle.None;
+        playMenu.style.display = DisplayStyle.Flex;
+    }
+
+    void QuitNegativeActive()
+    {
+        quitMenu.style.display = DisplayStyle.None;
+        playMenu.style.display = DisplayStyle.Flex;
     }
 
     void ProfileButtonActive()

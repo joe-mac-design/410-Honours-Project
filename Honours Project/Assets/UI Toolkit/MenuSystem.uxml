@@ -1,14 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/MenuSystemUSS.uss?fileID=7433441132597879392&amp;guid=f4f71d511e6accf4baa019f59b31c7ee&amp;type=3#MenuSystemUSS" />
-    <ui:VisualElement name="MainContainer" style="width: 1920px; height: 1080px;">
-        <ui:VisualElement name="PlayMenuContainer" class="SubMenuContainer" style="display: flex;">
-            <ui:Label text="PLAY MENU" display-tooltip-when-elided="true" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; font-size: 148px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
-        </ui:VisualElement>
+    <ui:VisualElement name="MainContainer" style="width: 1920px; height: 1080px; display: flex;">
+        <ui:VisualElement name="PlayMenuContainer" class="SubMenuContainer" style="display: flex; width: 1920px; height: 1080px; position: relative;" />
         <ui:VisualElement name="ProfileMenuContainer" class="SubMenuContainer" style="display: none;">
             <ui:Label text="PROFILE MENU" display-tooltip-when-elided="true" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; font-size: 148px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
         </ui:VisualElement>
-        <ui:VisualElement name="OptionsMenuContainer" class="SubMenuContainer" style="display: none;">
-            <ui:VisualElement name="OptionsContainer" style="position: absolute; width: 1200px; height: 600px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; background-color: rgb(21, 36, 75); visibility: visible; border-left-color: rgb(42, 232, 255); border-right-color: rgb(42, 232, 255); border-top-color: rgb(42, 232, 255); border-bottom-color: rgb(42, 232, 255);">
+        <ui:VisualElement name="OptionsMenuContainer" class="SubMenuContainer" style="display: none; justify-content: center;">
+            <ui:VisualElement name="OptionsContainer" style="position: absolute; width: 1500px; height: 600px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; background-color: rgb(21, 36, 75); visibility: visible; border-left-color: rgb(42, 232, 255); border-right-color: rgb(42, 232, 255); border-top-color: rgb(42, 232, 255); border-bottom-color: rgb(42, 232, 255);">
                 <ui:ScrollView style="width: 100%; height: 100%;">
                     <ui:VisualElement name="ScrollViewContainer" style="height: 900px; flex-direction: row; justify-content: space-between;">
                         <ui:GroupBox name="ScrollViewContents" style="width: 48%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; justify-content: flex-start;">
@@ -57,6 +55,9 @@
                     </ui:VisualElement>
                 </ui:ScrollView>
             </ui:VisualElement>
+            <ui:VisualElement name="TopWater" style="width: 1920px; height: 200px; top: -275px; background-image: url(&apos;project://database/Assets/UI/UIElements/Water-top.png?fileID=2800000&amp;guid=9618f8be22ae1864ab1cfbf5e828a8d1&amp;type=3#Water-top&apos;);" />
+            <ui:VisualElement name="BotWater" style="width: 1920px; height: 200px; bottom: -405px; background-image: url(&apos;project://database/Assets/UI/UIElements/Water-bot.png?fileID=2800000&amp;guid=b904d54bc8bca6b4e876c246f5dc8772&amp;type=3#Water-bot&apos;);" />
+            <ui:Button text="SAVE" display-tooltip-when-elided="true" name="SaveButton" class="StandardBtn" style="top: 250px;" />
         </ui:VisualElement>
         <ui:VisualElement name="NavBarContainer" style="width: 1920px; height: 150px; flex-direction: row-reverse; align-items: center; flex-shrink: 1; flex-basis: auto; flex-wrap: nowrap; justify-content: flex-end; position: absolute; left: auto; margin-top: 10px; margin-left: 0; margin-right: 0; margin-bottom: 0; display: flex;">
             <ui:Button text="QUIT" display-tooltip-when-elided="true" name="QuitButton" class="NavBarBtn" style="border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
@@ -66,14 +67,14 @@
                 <ui:Button display-tooltip-when-elided="true" name="ProfileButton" class="ProfileImageBtn" style="margin-right: 0; margin-left: 20px; height: 130px; width: 130px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="QuitMenuContainer" class="SubMenuContainer" style="display: none; align-items: center; justify-content: space-between;">
-            <ui:IMGUIContainer name="Water-top" style="width: 100%; height: 250px; background-color: rgb(59, 217, 255); translate: 0 -250px;" />
+        <ui:VisualElement name="QuitMenuContainer" class="SubMenuContainer" style="display: none; align-items: center; justify-content: center;">
+            <ui:VisualElement name="TopWater" style="width: 1920px; height: 400px; background-image: url(&apos;project://database/Assets/UI/UIElements/Water-top.png?fileID=2800000&amp;guid=9618f8be22ae1864ab1cfbf5e828a8d1&amp;type=3#Water-top&apos;);" />
             <ui:Label text="Are you sure you want to quit?&#10;Your progress will be saved." display-tooltip-when-elided="true" name="BodyLabel" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; font-size: 72px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
-            <ui:VisualElement name="ButtonContainer" style="flex-direction: row; margin-top: 0; width: 1200px; height: 150px; justify-content: space-around; align-items: center;">
+            <ui:VisualElement name="ButtonContainer" style="flex-direction: row; margin-top: 50px; width: 1200px; height: 150px; justify-content: space-around; align-items: center;">
                 <ui:Button text="YES" display-tooltip-when-elided="true" name="ConfirmBtn" class="StandardBtn" />
                 <ui:Button text="NO" display-tooltip-when-elided="true" name="NegativeBtn" class="StandardBtn" />
             </ui:VisualElement>
-            <ui:IMGUIContainer name="Water-Bottom" style="width: 100%; height: 250px; background-color: rgb(59, 217, 255); bottom: 0; translate: 0 250px;" />
+            <ui:VisualElement name="BotWater" style="width: 1920px; height: 400px; background-image: url(&apos;project://database/Assets/UI/UIElements/Water-bot.png?fileID=2800000&amp;guid=b904d54bc8bca6b4e876c246f5dc8772&amp;type=3#Water-bot&apos;);" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/LaunchSystemUSS.uss?fileID=7433441132597879392&amp;guid=46a876c2747cf7c41b5eaa99eb23aae7&amp;type=3#LaunchSystemUSS" />
+    <ui:VisualElement name="LaunchContainer" style="width: 1920px; height: 1080px; background-color: rgb(1, 40, 60);">
+        <ui:VisualElement name="LayoutElements" style="width: 1920px; height: 1080px; justify-content: space-between; display: flex;">
+            <ui:VisualElement name="TopWater" style="background-color: rgb(65, 197, 217); height: 350px;" />
+            <ui:VisualElement name="MidSection" style="height: 350px; align-items: center; justify-content: center;">
+                <ui:Button text="GLOW SIGN IN" display-tooltip-when-elided="true" name="SignInButton" class="MainButton" />
+                <ui:Label text="Sign in using your glow account" display-tooltip-when-elided="true" name="ButtonSubText" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Atkinson-Hyperlegible-Regular-102.ttf?fileID=12800000&amp;guid=ab14c2143aad4e945ab2ba1a1a402bb8&amp;type=3#Atkinson-Hyperlegible-Regular-102&apos;); -unity-font-definition: initial; font-size: 24px; color: rgb(254, 254, 254); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 10px; margin-bottom: 0;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="BotWater" style="background-color: rgb(75, 196, 216); height: 350px; justify-content: flex-end; align-items: flex-start;">
+                <ui:Button text="Exit" display-tooltip-when-elided="true" name="ExitButton" class="SmallButton" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

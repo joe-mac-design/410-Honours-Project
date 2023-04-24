@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="TutContainer" style="width: 1920px; height: 1080px;">
+        <ui:VisualElement name="TutScene1" style="height: 1080px; width: 1920px; justify-content: flex-end;">
+            <ui:VisualElement name="TutDisplay" style="width: 1920px; height: 200px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
