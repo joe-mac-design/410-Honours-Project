@@ -220,3 +220,71 @@
     margin-top: 0;
     margin-bottom: 30px;
 }
+
+.Continent {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(176, 176, 176, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    width: 808.86px;
+    height: 555.44px;
+    left: 27.92px;
+    position: absolute;
+    background-image: url('project://database/Assets/UI/UIElements/NA.png?fileID=2800000&guid=de12b67565f4b63428240649f720cb20&type=3#NA');
+    top: 147.72px;
+}
+
+.Continent:hover {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(176, 176, 176, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    width: 808.86px;
+    height: 555.44px;
+    left: 27.92px;
+    position: absolute;
+    background-image: url('project://database/Assets/UI/UIElements/NA.png?fileID=2800000&guid=de12b67565f4b63428240649f720cb20&type=3#NA');
+    top: 147.72px;
+    -unity-background-image-tint-color: rgb(2, 203, 225);
+}
+
+.Continent:active {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(176, 176, 176, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    width: 808.86px;
+    height: 555.44px;
+    left: 27.92px;
+    position: absolute;
+    background-image: url('project://database/Assets/UI/UIElements/NA.png?fileID=2800000&guid=de12b67565f4b63428240649f720cb20&type=3#NA');
+    top: 147.72px;
+    -unity-background-image-tint-color: rgb(0, 161, 178);
+}
