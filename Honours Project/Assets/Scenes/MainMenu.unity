@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 262595292}
   - component: {fileID: 262595291}
   - component: {fileID: 262595293}
+  - component: {fileID: 262595294}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -184,6 +185,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656ae9a36dfe20341a207a52d129daec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &262595294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262595290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639721063f7cd944b983e0bd3b790121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _newTexts:
+  - Here is your Profile! You can change your picture, nickname and check your badge
+    progress here!
+  - Here is the Play Button! you can select your lesson by selecting a continent!
+  - Here is the Options Button, you can adjust the video, audio and text in here!
+  - Here is the Quit Button! You can exit the game by clicking this button!
+  _lsTexts:
+  - Sign in using your glow account
+  - Fetching Profile
+  - Profile Fetched
+  _newBackgroundImages:
+  - {fileID: 2800000, guid: 60b17c022c0e9974680c667d2813818c, type: 3}
+  - {fileID: 2800000, guid: 2b11b4d01f5d35543a2ba28182809013, type: 3}
+  - {fileID: 2800000, guid: 3fb1da57b8c477646981884000dd8575, type: 3}
+  - {fileID: 2800000, guid: 72fde4cc96172914da8c61a4c1145523, type: 3}
 --- !u!1 &392478768
 GameObject:
   m_ObjectHideFlags: 0
