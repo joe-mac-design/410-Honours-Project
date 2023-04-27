@@ -8,6 +8,10 @@ public class UIController : MonoBehaviour
 {
     // Play Menu
     public Button playButton;
+    public VisualElement StaticMap;
+    public Button StaticNAButton;
+    public VisualElement ActiveMap;
+    public Button ActiveNAButton;
 
     // Options Menu
     public Button optionsButton;
@@ -34,7 +38,6 @@ public class UIController : MonoBehaviour
         playButton = root.Q<Button>("PlayButton");
         optionsButton = root.Q<Button>("OptionsButton");
         
-        // Quit Buttons
         quitButton = root.Q<Button>("QuitButton");
         quitConfirmButton = root.Q<Button>("ConfirmBtn");
         quitNegativeButton = root.Q<Button>("NegativeBtn");
@@ -46,6 +49,11 @@ public class UIController : MonoBehaviour
         playMenu = root.Q<VisualElement>("PlayMenuContainer");
         profileMenu = root.Q<VisualElement>("ProfileMenuContainer");
 
+        StaticMap = root.Q<VisualElement>("StaticMapContainer");
+        StaticNAButton = root.Q<Button>("StaticNA");
+        ActiveMap = root.Q<VisualElement>("ActiveMapContainer");
+        ActiveNAButton = root.Q<Button>("ActiveNA");
+
         optionsButton.clicked += OptionsButtonActive;
         quitButton.clicked += QuitButtonActive;
         playButton.clicked += PlayButtonActive;
@@ -53,6 +61,9 @@ public class UIController : MonoBehaviour
 
         quitConfirmButton.clicked += QuitConfirmActive;
         quitNegativeButton.clicked += QuitNegativeActive;
+
+        StaticNAButton.clicked += ActiveMapActive;
+        ActiveNAButton.clicked += StaticMapActive;
     }
 
     void PlayButtonActive()
@@ -92,5 +103,17 @@ public class UIController : MonoBehaviour
         profileMenu.style.display = DisplayStyle.Flex;
         quitMenu.style.display = DisplayStyle.None;
         optionsMenu.style.display = DisplayStyle.None;
+    }
+
+    void ActiveMapActive()
+    {
+        StaticMap.visible = false;
+        ActiveMap.visible = true;
+    }
+
+    void StaticMapActive() 
+    {
+        StaticMap.visible = true;
+        ActiveMap.visible = false;
     }
 }
