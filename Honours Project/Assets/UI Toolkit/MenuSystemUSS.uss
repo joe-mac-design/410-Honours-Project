@@ -288,3 +288,114 @@
     top: 147.72px;
     -unity-background-image-tint-color: rgb(0, 161, 178);
 }
+
+.NicknameField {
+    position: absolute;
+    flex-direction: column;
+    height: 125px;
+    width: 550px;
+    -unity-font: url('project://database/Assets/UI/Fonts/Atkinson-Hyperlegible-Regular-102.ttf?fileID=12800000&guid=ab14c2143aad4e945ab2ba1a1a402bb8&type=3#Atkinson-Hyperlegible-Regular-102');
+    font-size: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    -unity-font-definition: initial;
+    color: rgb(254, 254, 254);
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+    -unity-font-style: normal;
+}
+
+.MapPointer {
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left-color: rgb(75, 196, 216);
+    border-right-color: rgb(75, 196, 216);
+    border-top-color: rgb(75, 196, 216);
+    border-bottom-color: rgb(75, 196, 216);
+    background-color: rgb(1, 40, 60);
+    position: absolute;
+    left: 540px;
+    top: 270px;
+}
+
+.MapPointer:hover {
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left-color: rgb(1, 40, 60);
+    border-right-color: rgb(1, 40, 60);
+    border-top-color: rgb(1, 40, 60);
+    border-bottom-color: rgb(1, 40, 60);
+    background-color: rgb(75, 196, 216);
+    position: absolute;
+    left: 540px;
+    top: 270px;
+}
+
+.MapPointer:active {
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left-color: rgb(1, 40, 60);
+    border-right-color: rgb(1, 40, 60);
+    border-top-color: rgb(1, 40, 60);
+    border-bottom-color: rgb(1, 40, 60);
+    background-color: rgb(0, 161, 178);
+    position: absolute;
+    left: 540px;
+    top: 270px;
+}

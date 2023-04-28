@@ -12,6 +12,15 @@ public class UIController : MonoBehaviour
     public Button StaticNAButton;
     public VisualElement ActiveMap;
     public Button ActiveNAButton;
+    public Button MapPointer_1;
+    public Button MapPointer_2;
+    public Button MapPointer_3;
+    public VisualElement LessonBox_1;
+    public VisualElement LessonBox_2;
+    public VisualElement LessonBox_3;
+    public Button LessonBoxButton_1;
+    public Button LessonBoxButton_2;
+    public Button LessonBoxButton_3;
 
     // Options Menu
     public Button optionsButton;
@@ -30,10 +39,16 @@ public class UIController : MonoBehaviour
     public VisualElement quitMenu;
     public VisualElement profileMenu;
 
+    public VisualElement MainContainer;
+    public VisualElement GameContainer;
+
     // Start is called before the first frame update
     void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
+
+        MainContainer = root.Q<VisualElement>("MainContainer");
+        GameContainer = root.Q<VisualElement>("GameContainer");
 
         playButton = root.Q<Button>("PlayButton");
         optionsButton = root.Q<Button>("OptionsButton");
@@ -54,6 +69,16 @@ public class UIController : MonoBehaviour
         ActiveMap = root.Q<VisualElement>("ActiveMapContainer");
         ActiveNAButton = root.Q<Button>("ActiveNA");
 
+        MapPointer_1 = root.Q<Button>("MapPointer-1");
+        LessonBox_1 = root.Q<VisualElement>("LessonBox-1");
+        LessonBoxButton_1 = root.Q<Button>("LessonStartButton");
+
+        MapPointer_2 = root.Q<Button>("MapPointer-2");
+        LessonBox_2 = root.Q<VisualElement>("LessonBox-2");
+
+        MapPointer_3 = root.Q<Button>("MapPointer-3");
+        LessonBox_3 = root.Q<VisualElement>("LessonBox-3");
+
         optionsButton.clicked += OptionsButtonActive;
         quitButton.clicked += QuitButtonActive;
         playButton.clicked += PlayButtonActive;
@@ -64,6 +89,13 @@ public class UIController : MonoBehaviour
 
         StaticNAButton.clicked += ActiveMapActive;
         ActiveNAButton.clicked += StaticMapActive;
+
+        MapPointer_1.clicked += LessonBox_1Active;
+        LessonBoxButton_1.clicked += LessonStartButton_1Active;
+
+        MapPointer_2.clicked += LessonBox_2Active;
+
+        MapPointer_3.clicked += LessonBox_3Active;
     }
 
     void PlayButtonActive()
@@ -114,6 +146,54 @@ public class UIController : MonoBehaviour
     void StaticMapActive() 
     {
         StaticMap.visible = true;
+        LessonBox_1.visible = false;
+        LessonBox_2.visible = false;
+        LessonBox_3.visible = false;
         ActiveMap.visible = false;
+    }
+
+    void LessonBox_1Active()
+    {
+        // Clicking the button will enable the LessonBox, clicking it again while disable it the lessonbox
+        if (LessonBox_1.visible == false)
+        {
+            LessonBox_1.visible = true;
+        }
+        else
+        {
+            LessonBox_1.visible = false;
+        }
+    }
+
+    void LessonStartButton_1Active()
+    {
+        MainContainer.style.display = DisplayStyle.None;
+        GameContainer.style.display = DisplayStyle.Flex;
+    }
+
+    void LessonBox_2Active()
+    {
+        // Clicking the button will enable the LessonBox, clicking it again while disable it the lessonbox
+        if (LessonBox_2.visible == false)
+        {
+            LessonBox_2.visible = true;
+        }
+        else
+        {
+            LessonBox_2.visible = false;
+        }
+    }
+
+    void LessonBox_3Active()
+    {
+        // Clicking the button will enable the LessonBox, clicking it again while disable it the lessonbox
+        if (LessonBox_3.visible == false)
+        {
+            LessonBox_3.visible = true;
+        }
+        else
+        {
+            LessonBox_3.visible = false;
+        }
     }
 }
