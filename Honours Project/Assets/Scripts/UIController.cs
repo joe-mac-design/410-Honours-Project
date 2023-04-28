@@ -120,8 +120,11 @@ public class UIController : MonoBehaviour
 
     void QuitConfirmActive()
     {
-        quitMenu.style.display = DisplayStyle.None;
-        playMenu.style.display = DisplayStyle.Flex;
+        // exit the game and in the editor, stop playing
+        Application.Quit();
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 
     void QuitNegativeActive()
