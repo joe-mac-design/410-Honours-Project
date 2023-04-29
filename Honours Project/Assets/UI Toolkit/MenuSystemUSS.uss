@@ -3,7 +3,7 @@
     -unity-font-definition: initial;
     -unity-font-style: normal;
     background-color: rgb(252, 255, 59);
-    color: rgb(56, 56, 56);
+    color: rgb(87, 87, 87);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0;
@@ -32,7 +32,7 @@
     -unity-font-definition: initial;
     -unity-font-style: normal;
     background-color: rgb(200, 202, 39);
-    color: rgb(56, 56, 56);
+    color: rgb(87, 87, 87);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0;
@@ -61,7 +61,7 @@
     -unity-font-definition: initial;
     -unity-font-style: normal;
     background-color: rgb(164, 166, 29);
-    color: rgb(56, 56, 56);
+    color: rgb(87, 87, 87);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0;
@@ -158,6 +158,7 @@
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    color: rgba(87, 87, 87, 255);
 }
 
 .StandardBtn:hover {
@@ -183,6 +184,7 @@
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    color: rgba(87, 87, 87, 255);
 }
 
 .StandardBtn:active {
@@ -208,6 +210,7 @@
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    color: rgba(87, 87, 87, 255);
 }
 
 .OptionsContentContainer {
