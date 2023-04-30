@@ -40,6 +40,30 @@ public class TextUpdateScript : MonoBehaviour
     // Main Menu
     public VisualElement _MainContainer;
 
+    // Game Menu
+    [SerializeField] private VisualElement _GameContainer;
+    [SerializeField] private VisualElement _GameLessonCompleteContainer;
+    //Game Tutorial
+    [SerializeField] private VisualElement _GameTutorialContainer;
+    [SerializeField] private Button _GameContinueButton;
+    [SerializeField] private Button _GameFinishButton;
+    [SerializeField] private Label _GameTutText;
+    [SerializeField] private string[] _GameTutTextArray;
+    // Game Pause
+    [SerializeField] private VisualElement _GamePauseContainer;
+    [SerializeField] private VisualElement _GameQuitMenuContainer;
+    [SerializeField] private Button _GamePauseConfirmBtn;
+    [SerializeField] private Button _GamePauseNegativeBtn;
+    [SerializeField] private Button _GamePauseButton;
+    [SerializeField] private Button _GameResumeButton;
+    [SerializeField] private Button _GameOptionsButton;
+    [SerializeField] private Button _GameSaveButton;
+    [SerializeField] private string[] _GameSaveButtonTextArray;
+    [SerializeField] private Button _GameSaveQuitButton;
+    [SerializeField] private VisualElement _GamePauseOptions;
+    [SerializeField] private Button _GamePauseOptionsSaveButton;
+    [SerializeField] private string[] _GamePauseOptionsSaveButtonTextArray;
+
     private void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
@@ -71,6 +95,42 @@ public class TextUpdateScript : MonoBehaviour
 
         _LaunchTopWater = root.Q<VisualElement>("LSTopWater");
         _LaunchBotWater = root.Q<VisualElement>("LSBotWater");
+
+        _GameContainer = root.Q<VisualElement>("GameContainer");
+        _GameLessonCompleteContainer = root.Q<VisualElement>("LessonCompleteContainer");
+        _GameTutorialContainer = root.Q<VisualElement>("GameTutBotWater");
+
+        _GameTutText = root.Q<Label>("GameTutText");
+        _GameContinueButton = root.Q<Button>("GameContinueBtn");
+        _GameFinishButton = root.Q<Button>("GameFinishBtn");
+
+        _GamePauseContainer = root.Q<VisualElement>("PauseMenuContainer");
+        _GameQuitMenuContainer = root.Q<VisualElement>("GameQuitMenuContainer");
+        _GamePauseConfirmBtn = root.Q<Button>("GamePauseConfirmBtn");
+        _GamePauseNegativeBtn = root.Q<Button>("GamePauseNegativeBtn");
+
+        _GamePauseButton = root.Q<Button>("GamePauseButton");
+        _GameResumeButton = root.Q<Button>("PMResume");
+        _GameOptionsButton = root.Q<Button>("PMOptions");
+        _GameSaveButton = root.Q<Button>("PMSave");
+        _GameSaveQuitButton = root.Q<Button>("PMSaveQuit");
+
+        _GamePauseOptions = root.Q<VisualElement>("PMOptionsContainer");
+        _GamePauseOptionsSaveButton = root.Q<Button>("PMOptionsSaveButton");
+
+        _GameContinueButton.clicked += OnGCButtonClicked;
+        _GameFinishButton.clicked += OnGFButtonClicked;
+
+        _GamePauseButton.clicked += OnGPButtonClicked;
+        _GameResumeButton.clicked += OnGRButtonClicked;
+        _GameSaveButton.clicked += OnGSButtonClicked;
+        _GameSaveQuitButton.clicked += OnGSQButtonClicked;
+
+        _GameOptionsButton.clicked += OnGPOButtonClicked;
+        _GamePauseOptionsSaveButton.clicked += OnGPOSButtonClicked;
+
+        _GamePauseConfirmBtn.clicked += OnGPCButtonClicked;
+        _GamePauseNegativeBtn.clicked += OnGPNButtonClicked;
 
         _TutorialContinueBtn.clicked += OnCtnButtonClicked;
         _TutorialFinishBtn.clicked += OnFsnButtonClicked;
@@ -167,5 +227,87 @@ public class TextUpdateScript : MonoBehaviour
     {
         _LaunchSqeuenceProfileCreationConfirmContainer.style.display = DisplayStyle.None;
         _LaunchProfileCreationContainer.style.display = DisplayStyle.Flex;
+    }
+
+    private void OnGPButtonClicked() 
+    {
+        _GamePauseContainer.style.display = DisplayStyle.Flex;
+    }
+
+    private void OnGCButtonClicked() 
+    {
+        _currentTextIndex = (_currentTextIndex + 1) % _GameTutTextArray.Length;
+        _GameTutText.text = _GameTutTextArray[_currentTextIndex];
+
+        if (_currentTextIndex == _GameTutTextArray.Length - 1)
+        {
+            _GameContinueButton.style.display = DisplayStyle.None;
+            _GameFinishButton.style.display = DisplayStyle.Flex;
+        }
+
+    }
+
+    private async void OnGFButtonClicked() 
+    {
+        _GameTutorialContainer.style.display = DisplayStyle.None;
+
+        await Task.Delay(15000);
+        _GameLessonCompleteContainer.style.display = DisplayStyle.Flex;
+    }
+
+    private void OnGRButtonClicked() 
+    {
+        _GamePauseContainer.style.display = DisplayStyle.None;
+    }
+
+    private void OnGSQButtonClicked() 
+    {
+        _GameQuitMenuContainer.style.display = DisplayStyle.Flex;
+    }
+
+    private async void OnGPCButtonClicked() 
+    {
+        await Task.Delay(500);
+        _GameQuitMenuContainer.style.display = DisplayStyle.None;
+        _GamePauseContainer.style.display = DisplayStyle.None;
+        _GameContainer.style.display = DisplayStyle.None;
+        _MainContainer.style.display = DisplayStyle.Flex;
+    }
+
+    private void OnGPNButtonClicked() 
+    {
+        _GameQuitMenuContainer.style.display = DisplayStyle.None;
+    }
+
+    private async void OnGSButtonClicked() 
+    {
+        await Task.Delay(500);
+        _GameSaveButton.text = _GameSaveButtonTextArray[0];
+        await Task.Delay(500);
+        _GameSaveButton.text = _GameSaveButtonTextArray[1];
+        await Task.Delay(500);
+        _GameSaveButton.text = _GameSaveButtonTextArray[2];
+        await Task.Delay(500);
+        _GameSaveButton.text = _GameSaveButtonTextArray[3];
+    }
+
+    private void OnGPOButtonClicked() 
+    {
+        _GamePauseOptions.style.display = DisplayStyle.Flex;
+    }
+
+    private async void OnGPOSButtonClicked()
+    {
+        await Task.Delay(500);
+        _GamePauseOptionsSaveButton.text = _GamePauseOptionsSaveButtonTextArray[0];
+        await Task.Delay(500);
+        _GamePauseOptionsSaveButton.text = _GamePauseOptionsSaveButtonTextArray[1];
+        await Task.Delay(500);
+        _GamePauseOptionsSaveButton.text = _GamePauseOptionsSaveButtonTextArray[2];
+        await Task.Delay(500);
+        _GamePauseOptionsSaveButton.text = _GamePauseOptionsSaveButtonTextArray[3];
+
+        await Task.Delay(250);
+        _GamePauseOptions.style.display = DisplayStyle.None;
     }
 }
