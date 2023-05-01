@@ -185,6 +185,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656ae9a36dfe20341a207a52d129daec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ProfileMenuSaveButtonTextArray:
+  - SAVE
+  - SAVING..
+  - SAVED
+  - SAVE
 --- !u!114 &262595294
 MonoBehaviour:
   m_ObjectHideFlags: 0

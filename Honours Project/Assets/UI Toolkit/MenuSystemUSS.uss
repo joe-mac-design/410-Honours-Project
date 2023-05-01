@@ -158,7 +158,7 @@
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    color: rgba(87, 87, 87, 255);
+    color: rgb(87, 87, 87);
 }
 
 .StandardBtn:hover {
@@ -184,7 +184,7 @@
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    color: rgba(87, 87, 87, 255);
+    color: rgb(87, 87, 87);
 }
 
 .StandardBtn:active {
@@ -210,7 +210,7 @@
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    color: rgba(87, 87, 87, 255);
+    color: rgb(87, 87, 87);
 }
 
 .OptionsContentContainer {
@@ -401,4 +401,70 @@
     position: absolute;
     left: 540px;
     top: 270px;
+}
+
+.SubNavBarBtn {
+    background-color: rgb(252, 255, 59);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+    width: 500px;
+    -unity-font: url('project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&type=3#Sono-Bold');
+    font-size: 28px;
+    -unity-font-definition: initial;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    color: rgba(87, 87, 87, 255);
+}
+
+.SubNavBarBtn:hover {
+    background-color: rgb(200, 202, 39);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+    width: 500px;
+    -unity-font: url('project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&type=3#Sono-Bold');
+    font-size: 28px;
+    -unity-font-definition: initial;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    color: rgb(87, 87, 87);
+}
+
+.SubNavBarBtn:active {
+    background-color: rgb(164, 166, 29);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+    width: 500px;
+    -unity-font: url('project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&type=3#Sono-Bold');
+    font-size: 28px;
+    -unity-font-definition: initial;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    color: rgb(87, 87, 87);
 }
