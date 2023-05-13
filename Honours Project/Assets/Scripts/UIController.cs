@@ -33,6 +33,7 @@ public class UIController : MonoBehaviour
 
     // Profile Menu
     public Button profileButton;
+    public Button optionsMenuSaveButton;
     public Button IconButton;
     public Button IconSaveButton;
     public Button BadgesButton;
@@ -76,6 +77,7 @@ public class UIController : MonoBehaviour
         quitNegativeButton = root.Q<Button>("NegativeBtn");
         
         profileButton = root.Q<Button>("ProfileButton");
+        optionsMenuSaveButton = root.Q<Button>("OptionsSaveButton");
 
         optionsMenu = root.Q<VisualElement>("OptionsMenuContainer");
         quitMenu = root.Q<VisualElement>("QuitMenuContainer");
@@ -122,6 +124,8 @@ public class UIController : MonoBehaviour
         playButton.clicked += PlayButtonActive;
         profileButton.clicked += ProfileButtonActive;
 
+        optionsMenuSaveButton.clicked += OptionsMenuSaveButtonActive;
+
         IconButton.clicked += IconContainerActive;
         IconSaveButton.clicked += IconSaveButtonActive;
 
@@ -160,6 +164,18 @@ public class UIController : MonoBehaviour
     {
         optionsMenu.style.display = DisplayStyle.Flex;
         quitMenu.style.display = DisplayStyle.None;
+        profileMenu.style.display = DisplayStyle.None;
+    }
+
+    async void OptionsMenuSaveButtonActive()
+    {
+        optionsMenuSaveButton.text = _ProfileMenuSaveButtonTextArray[0];
+        await Task.Delay(1000);
+        optionsMenuSaveButton.text = _ProfileMenuSaveButtonTextArray[1];
+        await Task.Delay(1000);
+        optionsMenuSaveButton.text = _ProfileMenuSaveButtonTextArray[2];
+        await Task.Delay(1000);
+        optionsMenuSaveButton.text = _ProfileMenuSaveButtonTextArray[3];
     }
 
     void QuitButtonActive()
