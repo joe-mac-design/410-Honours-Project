@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639721063f7cd944b983e0bd3b790121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _LoginButtonBGImage: {fileID: -1304905567622442630, guid: 663cd4e7ed50fee49b5cf3e843bfd15a, type: 3}
+  _LoginButtonBGImage: {fileID: 2800000, guid: 1c4579cd9c4266547b09cc7704b17db1, type: 3}
   _LoginTextArray:
   - Sign in using your glow account
   - Fetching Profile
@@ -218,10 +218,10 @@ MonoBehaviour:
   - Here is the Options Button, you can adjust the video, audio and text in here!
   - Here is the Quit Button! You can exit the game by clicking this button!
   _TutorialOpacityBackgroundImageArray:
-  - {fileID: 2800000, guid: 60b17c022c0e9974680c667d2813818c, type: 3}
-  - {fileID: 2800000, guid: 2b11b4d01f5d35543a2ba28182809013, type: 3}
-  - {fileID: 2800000, guid: 3fb1da57b8c477646981884000dd8575, type: 3}
-  - {fileID: 2800000, guid: 72fde4cc96172914da8c61a4c1145523, type: 3}
+  - {fileID: 2800000, guid: a953c08d46a46c74fb61784fe80a56ec, type: 3}
+  - {fileID: 2800000, guid: 1d5282a0fcd282348955dec5ddcbad2a, type: 3}
+  - {fileID: 2800000, guid: 6198c425fc029964d9fef8d73eda9bf7, type: 3}
+  - {fileID: 2800000, guid: a4237cf442ded4e4d9b6f5d5fc468863, type: 3}
   _GameTutTextArray:
   - Welcome to Lesson 1! in this lesson you will learn about the 4 basic types of
     recycling!
