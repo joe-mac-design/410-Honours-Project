@@ -9,9 +9,13 @@ public class TextUpdateScript : MonoBehaviour
     // Launch Menu
     public VisualElement _LaunchContainer;
     public VisualElement _LaunchSequenceContainer;
+    public VisualElement _LaunchExitMenuContainer;
     public VisualElement _LaunchProfileCreationContainer;
     public VisualElement _LaunchSqeuenceProfileCreationConfirmContainer;
     [SerializeField] private Button _LaunchLoginButton;
+    [SerializeField] private Button _LaunchExitButton;
+    [SerializeField] private Button _LaunchExitYesButton;
+    [SerializeField] private Button _LaunchExitNoButton;
     [SerializeField] private Label _LaunchButtonSubText;
     [SerializeField] private Texture2D _LoginButtonBGImage;
     [SerializeField] private string[] _LoginTextArray;
@@ -75,6 +79,11 @@ public class TextUpdateScript : MonoBehaviour
         _TutorialContainer = root.Q<VisualElement>("TutorialContainer");
         _MainContainer = root.Q<VisualElement>("MainContainer");
 
+        _LaunchExitMenuContainer = root.Q<VisualElement>("LSExitMenuContainer");
+        _LaunchExitButton = root.Q<Button>("LSExit_Btn");
+        _LaunchExitYesButton = root.Q<Button>("LSExitYesButton");
+        _LaunchExitNoButton = root.Q<Button>("LSExitNoButton");
+
         _LaunchConfirmYesNoContainer = root.Q<VisualElement>("YNButtonContainer");
         _LaunchConfirmLoadingContainer = root.Q<VisualElement>("LoadingButtonContainer");
         _ProfileConfirmLabel = root.Q<Label>("LSCMLabel");
@@ -135,6 +144,10 @@ public class TextUpdateScript : MonoBehaviour
         _TutorialContinueBtn.clicked += OnCtnButtonClicked;
         _TutorialFinishBtn.clicked += OnFsnButtonClicked;
         _LaunchLoginButton.clicked += OnLSButtonClicked;
+
+        _LaunchExitButton.clicked += OnLEButtonClicked;
+        _LaunchExitYesButton.clicked += OnLEYButtonClicked;
+        _LaunchExitNoButton.clicked += OnLENButtonClicked;
 
         _ProfileCreationContinueButton.clicked += OnPCButtonClicked;
         _ProfileConfirmButton.clicked += OnLSCMYButtonClicked;
@@ -204,6 +217,21 @@ public class TextUpdateScript : MonoBehaviour
 
         _LaunchSequenceContainer.style.display = DisplayStyle.None;
         _LaunchProfileCreationContainer.style.display = DisplayStyle.Flex;
+    }
+
+    private void OnLEButtonClicked()
+    {
+        _LaunchExitMenuContainer.style.display = DisplayStyle.Flex;
+    }
+
+    private void OnLEYButtonClicked()
+    {
+        Application.Quit();
+    }
+
+    private void OnLENButtonClicked()
+    {
+        _LaunchExitMenuContainer.style.display = DisplayStyle.None;
     }
 
     private void OnPCButtonClicked()
