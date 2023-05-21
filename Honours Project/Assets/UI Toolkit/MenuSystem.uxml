@@ -2,15 +2,15 @@
     <Style src="project://database/Assets/UI%20Toolkit/MenuSystemUSS.uss?fileID=7433441132597879392&amp;guid=f4f71d511e6accf4baa019f59b31c7ee&amp;type=3#MenuSystemUSS" />
     <ui:VisualElement name="LaunchContainer" style="display: flex; width: 1920px; height: 1080px; background-color: rgb(1, 40, 60); visibility: visible;">
         <ui:VisualElement name="LaunchSequence" style="position: absolute; width: 1920px; height: 1080px; justify-content: space-between; align-items: center; display: flex;">
-            <ui:VisualElement name="LSTopWater" style="width: 1920px; height: 400px; background-image: url(&apos;project://database/Assets/UI/UIElements/Water-top.png?fileID=2800000&amp;guid=9618f8be22ae1864ab1cfbf5e828a8d1&amp;type=3#Water-top&apos;);" />
-            <ui:Button text="GLOW SIGN IN" display-tooltip-when-elided="true" name="SignInBtn" class="StandardBtn" style="font-size: 48px; position: relative; display: flex; -unity-background-scale-mode: scale-to-fit;" />
-            <ui:Label text="Sign in using your glow account" display-tooltip-when-elided="true" name="SubText" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Atkinson-Hyperlegible-Regular-102.ttf?fileID=12800000&amp;guid=ab14c2143aad4e945ab2ba1a1a402bb8&amp;type=3#Atkinson-Hyperlegible-Regular-102&apos;); -unity-font-definition: initial; font-size: 24px; -unity-text-align: middle-center; color: rgb(255, 255, 255); white-space: nowrap; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; top: -30px;" />
+            <ui:VisualElement name="LSTopWater" style="width: 1920px; height: 400px; background-image: url(&apos;project://database/Assets/UI/UIElements/Water-top.png?fileID=2800000&amp;guid=9618f8be22ae1864ab1cfbf5e828a8d1&amp;type=3#Water-top&apos;); position: absolute;" />
+            <ui:Button text="GLOW SIGN IN" display-tooltip-when-elided="true" name="SignInBtn" class="StandardBtn" style="font-size: 48px; position: absolute; display: flex; -unity-background-scale-mode: scale-to-fit; top: 500px;" />
+            <ui:Label text="Sign in using your glow account" display-tooltip-when-elided="true" name="SubText" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Atkinson-Hyperlegible-Regular-102.ttf?fileID=12800000&amp;guid=ab14c2143aad4e945ab2ba1a1a402bb8&amp;type=3#Atkinson-Hyperlegible-Regular-102&apos;); -unity-font-definition: initial; font-size: 24px; -unity-text-align: middle-center; color: rgb(255, 255, 255); white-space: nowrap; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: absolute; top: 630px;" />
             <ui:VisualElement name="LSBotWater" style="width: 1920px; height: 400px; background-image: url(&apos;project://database/Assets/UI/UIElements/Water-bot.png?fileID=2800000&amp;guid=b904d54bc8bca6b4e876c246f5dc8772&amp;type=3#Water-bot&apos;); position: absolute; bottom: 0;" />
-            <ui:Button text="EXIT" display-tooltip-when-elided="true" name="LSExit_Btn" class="StandardBtn" style="width: 250px; height: 75px; font-size: 48px; left: -820px; bottom: 15px;" />
+            <ui:Button text="QUIT" display-tooltip-when-elided="true" name="LSExit_Btn" class="StandardBtn" style="width: 250px; height: 75px; font-size: 48px; left: 15px; bottom: 15px; position: absolute;" />
         </ui:VisualElement>
         <ui:VisualElement name="LSExitMenuContainer" class="SubMenuContainer" style="display: none; align-items: center; justify-content: space-between; background-color: rgb(1, 40, 60);">
             <ui:VisualElement name="TopWater" style="width: 1920px; height: 400px; background-image: url(&apos;project://database/Assets/UI/UIElements/Water-top.png?fileID=2800000&amp;guid=9618f8be22ae1864ab1cfbf5e828a8d1&amp;type=3#Water-top&apos;);" />
-            <ui:Label text="Are you sure you want to Exit?" display-tooltip-when-elided="true" name="LSCMLabel" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; font-size: 48px; -unity-text-align: middle-center; color: rgb(255, 255, 255); display: flex;" />
+            <ui:Label text="Are you sure you want to quit?" display-tooltip-when-elided="true" name="LSCMLabel" style="-unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; font-size: 48px; -unity-text-align: middle-center; color: rgb(255, 255, 255); display: flex;" />
             <ui:VisualElement name="LSExitYNButtonContainer" style="flex-direction: row; margin-top: 0; width: 1200px; height: 200px; justify-content: space-around; align-items: center; display: flex;">
                 <ui:Button text="YES" display-tooltip-when-elided="true" name="LSExitYesButton" class="StandardBtn" />
                 <ui:Button text="NO" display-tooltip-when-elided="true" name="LSExitNoButton" class="StandardBtn" />
@@ -316,10 +316,10 @@
                             <ui:VisualElement name="AccessContents" style="height: 425px;">
                                 <ui:Label text="Acessibility" display-tooltip-when-elided="true" name="Heading" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 48px; visibility: hidden;" />
                                 <ui:VisualElement name="Divider" style="width: 100%; height: 5px; background-color: rgb(42, 232, 255); margin-bottom: 30px;" />
-                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
-                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
-                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
-                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex; top: 10px;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex; top: 20px;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex; top: 30px;" />
+                                <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex; top: 40px;" />
                             </ui:VisualElement>
                         </ui:GroupBox>
                     </ui:VisualElement>
@@ -405,10 +405,10 @@
                                 <ui:VisualElement name="AccessContents" style="height: 425px;">
                                     <ui:Label text="Acessibility" display-tooltip-when-elided="true" name="Heading" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font: url(&apos;project://database/Assets/UI/Fonts/Sono-Bold.ttf?fileID=12800000&amp;guid=9b89d4a9c7db9ca42b0cb94d5eb80e0a&amp;type=3#Sono-Bold&apos;); -unity-font-definition: initial; color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 48px; visibility: hidden;" />
                                     <ui:VisualElement name="Divider" style="width: 100%; height: 5px; background-color: rgb(42, 232, 255); margin-bottom: 30px;" />
-                                    <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
-                                    <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
-                                    <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
-                                    <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex;" />
+                                    <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex; top: 10px;" />
+                                    <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex; top: 20px;" />
+                                    <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex; top: 30px;" />
+                                    <ui:Label text="Descriptor Text" display-tooltip-when-elided="true" class="OptionsContentContainer" style="display: flex; top: 40px;" />
                                 </ui:VisualElement>
                             </ui:GroupBox>
                         </ui:VisualElement>
